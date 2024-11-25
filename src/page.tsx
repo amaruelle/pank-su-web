@@ -36,9 +36,9 @@ export default function Portfolio() {
         {/* Header Section */}
         <div className="grid gap-6 md:grid-cols-2">
           {/* Profile Card */}
-          <Card className="p-6 flex flex-col items-center justify-center rounded-full">
+          <Card className="py-2 px-4 flex flex-col items-center place-content-center rounded-full">
             <div className="flex items-center gap-4">
-              <div className="flex h-24 w-24 items-center justify-center rounded-full bg-pink-100 text-lg font-semibold flex-col items-center">
+              <div className="flex h-24 w-24 items-center justify-center rounded-full text-lg font-semibold flex-col items-center">
                 <img src="src/static/avatar.jpeg" className="rounded-full" alt=""/>
               </div>
               <div>
@@ -72,7 +72,7 @@ export default function Portfolio() {
               <Card
                 key={i}
                 className={`p-4 ${
-                  i % 2 === 0 ? "bg-pink-100" : "bg-purple-100"
+                  i % 2 === 0 ? "transition hover:bg-pink-200 bg-pink-100" : "transition hover:bg-purple-200 bg-purple-100"
                 }`}
               >
                 <div className="space-y-2">
@@ -91,7 +91,7 @@ export default function Portfolio() {
         {/* Timeline Section */}
         <h2 className="pt-10 font-mono text-lg font-semibold">Timeline</h2>
         <Separator></Separator>
-        <div className="grid gap-6 md:grid-cols-2">
+        <div className="grid gap-6 md:grid-cols-2 pb-6">
           {timeline.map((item, i) => (
             <div key={i} className="space-y-2">
               <div className="flex items-center gap-2">
@@ -108,27 +108,27 @@ export default function Portfolio() {
         </div>
 
         {/* Social Links */}
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-2 w-fit">
           <a
             href="https://vk.com/pank_su"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Badge variant="outline" className="hover:bg-gray-200">VK</Badge>
+            <Badge className="bg-pink-600 hover:bg-pink-800">VK</Badge>
           </a>
           <a
             href="https://t.me/pank_su"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Badge variant="outline" className="hover:bg-gray-200">Telegram</Badge>
+            <Badge className="bg-pink-600 hover:bg-pink-800">Telegram</Badge>
           </a>
           <a
             href="https://github.com/pank-su"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Badge variant="outline" className="hover:bg-gray-200">GitHub</Badge>
+            <Badge className="bg-pink-600 hover:bg-pink-800">GitHub</Badge>
           </a>
         </div>
       </div>
